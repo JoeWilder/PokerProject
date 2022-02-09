@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*******************************************
+Program:  Poker.cs
+Purpose: Driver code
+Author:  Joe Wilder, Ty Rivera, Colin Capelo, Alex Kennedy
+Date: Feb 9th, 2022
+********************************************/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -6,7 +13,7 @@ using System.Windows.Forms;
 
 namespace PokerProject
 {
-    static class Program
+    static class Poker
     {
         /// <summary>
         /// The main entry point for the application.
