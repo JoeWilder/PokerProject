@@ -15,5 +15,10 @@ namespace PokerProject
 {
     class DeckOfCards
     {
+        // List<Card> new list or something
+
+        // ShuffleCards()
+
+        // DealACard()
     }
 }

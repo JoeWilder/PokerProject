@@ -15,6 +15,9 @@ namespace PokerProject
 {
     class Card
     {
+        // Rank variable
+        // suite variable
 
+        // DisplayACard()
     }
 }
