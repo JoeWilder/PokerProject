@@ -1,5 +1,5 @@
 ﻿/*******************************************
-Program:  DecoOfCards.cs
+Program:  DeckOfCards.cs
 Purpose: To store data about a deck
 Author:  Joe Wilder, Ty Rivera, Colin Capelo, Alex Kennedy
 Date: Feb 9th, 2022
