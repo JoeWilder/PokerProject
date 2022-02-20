@@ -18,6 +18,7 @@ namespace PokerProject
 		List<Card> deck = new List<Card>(); // store 52 cards in a deck
 		int cardCount = 0; // Start on card 0, continue until card 51
 
+
 		/* fill a deck with cards */
 		public void GenerateCards()
 		{
@@ -26,11 +27,23 @@ namespace PokerProject
 			{
 				for (int y = 0; y < 4; y++)
 				{
-					Card card = new Card(Card.Ranks[x], Card.Suits[y]);
+					String rank = Card.Ranks[x];
+					String suit = Card.Suits[y];
+					Card card;
+					try
+                    {
+						int.Parse(rank);
+						card = new Card(rank, suit, "_" + rank + "_of_" + suit);
+					}
+					catch(Exception)
+                    {
+						card = new Card(rank, suit, rank + "_of_" + suit);
+					}
 					deck.Add(card);
 				}
 			}
 		}
+
 
 		/* print all cards in the deck */
 		public void PrintDeck()
@@ -40,6 +53,7 @@ namespace PokerProject
 				Console.WriteLine(card.DisplayCard());
 			}
 		}
+
 
 		/* Randomize order of all cards in the deck using Fisher-Yates algorithm */
 		public void ShuffleCards()
@@ -56,12 +70,18 @@ namespace PokerProject
 			}
 		}
 
+
 		/* Print a new card from the deck */
-		public void DealACard()
+		public Card DealACard()
         {
+			if (cardCount >= 51)
+            {
+				cardCount = 0;
+				ShuffleCards();
+            }
 			Card card = deck[cardCount];
 			cardCount++;
-			Console.WriteLine("Dealing a new card: " + card.DisplayCard());
+			return card;
         }
 	}
 }
